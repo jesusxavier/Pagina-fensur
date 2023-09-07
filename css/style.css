@@ -1,0 +1,265 @@
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap);
+
+*
+{
+    box-sizing: border-box;
+    user-select: none;
+}
+
+a {
+    color:#fff;
+    text-decoration: none;
+}
+
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: white;
+    background: black;
+    font-family: "Cormorant Garamond" , serif;
+    text-transform: uppercase;
+}
+
+
+
+.section-heading {
+    font-size: clamp(0.5rem, 1.5vw, 5rem);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin-right: -0.2em;
+    color: #cccccc;
+    width: 90vw;
+    max-width: 1200px;
+    top: 85%;
+    position: absolute;
+    will-change: transform;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  0 5%;
+    width: 100%;
+    z-index: 3;
+    height: 7em;
+    font-family: "Bebas Neue", sans-serif ;
+    font-size: clamp(0.66em, 2vw, 1rem);
+    letter-spacing: 0.5em;
+}
+
+.title-section{
+  font-size: clamp(0.5rem, 3vw, 5rem);
+  position: absolute;
+  top:15%;
+  margin: auto;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    visibility: hidden;
+}
+
+section .outer,
+section .inner {
+    width: 100%;
+    height:100%;
+    overflow-y: hidden;
+}
+
+section .bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-size: cover ;
+    background-position: center;
+}
+
+section .bg .clip-text {
+    overflow: hidden;
+}
+
+.first .bg {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://images.unsplash.com/photo-1536195892759-c8a3c8e1945e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8&w=1000&q=80);
+}
+
+.second .bg {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://wallpapers-clan.com/wp-content/uploads/2023/02/milky-way-anime-aesthetics-background-wallpaper-2.jpg);
+}
+
+.third .bg {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://png.pngtree.com/thumb_back/fh260/background/20211021/pngtree-night-sky-background-with-stars-and-silhouette-of-house-image_912773.png);
+}
+
+.fourth .bg {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://images.unsplash.com/photo-1529573813483-53bd9ede667e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxNjQ3ODE4fHxlbnwwfHx8fHw%3D&w=1000&q=80);
+}
+
+.fifth .bg {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://c4.wallpaperflare.com/wallpaper/387/415/687/aesthetic-neon-wallpaper-preview.jpg);
+}
+
+.sixth .bg {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(https://i.pinimg.com/474x/e7/83/98/e783987590dfe167ca923d52c4723e5f.jpg);
+    background-position: 50% 45%;
+}
+
+
+.arrow-down {
+    position: absolute;
+    top: 92%;
+    height: 20px;
+    width: 20px;
+    border-top: 8px solid #dcf8ffd8;
+    border-left: 8px solid #dcf8ffd8;
+    transform: rotate(225deg);
+}
+
+.page-content{
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .page-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-height: 800px) {
+    .page-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Variable declaraciom */
+
+:root {
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+  /* Global CSS and Sass mixins defined in codepen.io/jsulpis/pen/ExdxLgM */
+  .card {
+    --transition-duration: 700ms;
+    color: white;
+    position: relative;
+    border-radius: 0.6em;
+    overflow: hidden;
+    font-size: 120%;
+    height: min(21em, 90vh);
+    max-width: 90vw;
+    box-shadow: var(--shadow-lg), var(--shadow-lg), var(--shadow-lg);
+    transition: transform var(--transition-duration);
+    border-radius:5px ;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% -150%, transparent 60%, rgba(0, 0, 0, 0.5));
+    transition: box-shadow var(--transition-duration);
+    mix-blend-mode: overlay;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    transition: transform var(--transition-duration);
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .content {
+    z-index: 1;
+    position: absolute;
+    bottom: min(2.5em, 6vmin);
+    left: min(3em, 8vmin);
+    right: min(3em, 8vmin);
+    text-align: left;
+    transition: transform var(--transition-duration) var(--ease-in-out);
+  }
+  .content > * {
+    position: relative;
+    will-change: transform;
+  }
+  
+  .card h1 {
+    font-size: 1.8em;
+    color: inherit;
+    margin: 0;
+  }
+  
+  .infos {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #eee;
+    display: flex;
+    gap: 0.35em;
+    align-items: flex-end;
+  }
+  .infos span {
+    line-height: 1;
+  }
+  
+  .synopsis {
+    font-size: 0.8em;
+    line-height: 1.4;
+    margin-block: 0.75em;
+    transition-delay: calc(var(--transition-duration) / 8);
+    transition-property: opacity, transform;
+    transition-duration: calc(var(--transition-duration) / 2);
+  }
+  
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  .card:hover img {
+    transform: scale(1.03);
+  }
+  .card:hover .synopsis {
+    transition-duration: var(--transition-duration);
+    transition-delay: calc(var(--transition-duration) / 3);
+  }
+  .card:hover .icons svg:nth-child(1) {
+    transition-delay: calc(var(--transition-duration) / 1.8);
+  }
+  .card:hover .icons svg:nth-child(2) {
+    transition-delay: calc(var(--transition-duration) / 1.6);
+  }
+  .card:hover .icons svg:nth-child(3) {
+    transition-delay: calc(var(--transition-duration) / 1.4);
+  }
+  
+  .card:not(:hover) .synopsis {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+  .card:not(:hover) .icons svg {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  .card:not(:hover) .content {
+    transform: translateY(calc(100% - 4.5em));
+  }
